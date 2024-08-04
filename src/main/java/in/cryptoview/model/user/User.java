@@ -6,7 +6,7 @@ public class User implements Serializable{
 	private static final long serialVersionUID =1L;
 
 	private String email;
-	private transient String password; // Marked as transient to avoid serialization
+	private transient String password; // transient to avoid serialization
 	private Watchlist watchlist;
 
 	public User(String email, String password) {
@@ -40,8 +40,6 @@ public class User implements Serializable{
 		this.watchlist = watchlist;
 	}
 
-	
-	// Method to remove a selected cryptocurrency from the watchlist
 	public void removeFromWatchlist(int index) {
 		watchlist.removeSelectedCrypto(index);
 	}
